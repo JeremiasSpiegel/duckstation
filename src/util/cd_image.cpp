@@ -71,6 +71,14 @@ std::unique_ptr<CDImage> CDImage::Open(const char* filename, bool allow_patches,
   {
     image = OpenM3uImage(filename, allow_patches, error);
   }
+  else if (StringUtil::Strcasecmp(extension, ".z") == 0)
+  {
+    image = OpenZCompressedImage(filename, error);
+  }
+  else if (StringUtil::Strcasecmp(extension, ".bz") == 0)
+  {
+    image = OpenZCompressedImage(filename, error);
+  }
   else if (IsDeviceName(filename))
   {
     image = OpenDeviceImage(filename, error);

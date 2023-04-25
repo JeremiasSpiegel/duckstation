@@ -229,6 +229,7 @@ public:
   static std::unique_ptr<CDImage> OpenPBPImage(const char* filename, Common::Error* error);
   static std::unique_ptr<CDImage> OpenM3uImage(const char* filename, bool apply_patches, Common::Error* error);
   static std::unique_ptr<CDImage> OpenDeviceImage(const char* filename, Common::Error* error);
+  static std::unique_ptr<CDImage> OpenZCompressedImage(const char* filename, Common::Error* error);
   static std::unique_ptr<CDImage>
   CreateMemoryImage(CDImage* image, ProgressCallback* progress = ProgressCallback::NullProgressCallback);
   static std::unique_ptr<CDImage> OverlayPPFPatch(const char* filename, std::unique_ptr<CDImage> parent_image,

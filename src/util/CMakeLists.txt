@@ -15,6 +15,7 @@ add_library(util
   cd_image_mds.cpp
   cd_image_pbp.cpp
   cd_image_ppf.cpp
+  cd_image_z.cpp
   cd_subchannel_replacement.cpp
   cd_subchannel_replacement.h
   cd_xa.cpp
@@ -42,4 +43,4 @@ add_library(util
 target_include_directories(util PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/..")
 target_include_directories(util PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
 target_link_libraries(util PUBLIC common simpleini)
-target_link_libraries(util PRIVATE libchdr zlib soundtouch)
+target_link_libraries(util PRIVATE libchdr zlib soundtouch bz2)
